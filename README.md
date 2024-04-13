@@ -1,2 +1,2 @@
-# Prog. Concorrente
-several projects and activities made for the concurrent programming class at UFSC
+# Concurrent Programming
+Several projects and activities made for the concurrent programming class at UFSC
