@@ -33,6 +33,7 @@ void threeChildrenCreator() {
             printf("Processo %d, filho de %d\n", getpid(), getppid());
             sleep(5);
             printf("Processo %d finalizado\n", getpid());
+            exit(EXIT_SUCCESS);
         }
     }
 }
@@ -43,6 +44,7 @@ void twoChildrenCreator() {
         pid = fork();
         if (pid == 0) {
             printf("Processo %d, filho de %d\n", getpid(), getppid());
+            fflush(stdout);
             threeChildrenCreator();
             while (wait(NULL) >= 0);
             printf("Processo %d finalizado\n", getpid());
